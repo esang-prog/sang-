@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aiza Portfolio</title>
+   
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="hehe.js">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <img src="images/about.jpeg" class="logo">
+         <ul>
+  <li><a href="index.html">Home</a></li>
+  <li class="active"><a href="about.html">About</a></li>
+  
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+         
+         
+        </div>
+        
+       
+        
+    
+   
+
+<section id="about">
+  
+  <div class="about-buttons">
+    <button onclick="showContent('bio')">ME</button>
+    <button onclick="showContent('school')"> SCHOOL</button>
+    <button onclick="showContent('hobbies')"> HOBBIES</button>
+    <button onclick="showContent('education')"> EDUCATION</button>
+    <button onclick="showContent('birthday')"> BIRTHDAY</button>
+    <button onclick="showContent('talents')">TALENTS</button>
+    <button onclick="showContent('family')">FAMILY AND FRIENDS</button>
+    
+  </div>
+  <div id="content-area">
+    <!-- content will be displayed here -->
+  </div>
+</section>
+
+
+<!-- content templates -->
+<div id="bio-content" style="display: none;">
+  <h2>AIZA MAXENE M. DUGA</h2>
+  <p>Hi, I'm Aiza Maxene M. Duga, a Bachelor of Science and Computer Science Student with a passion for developer.</p>
+</div>
+
+<div id="school-content" style="display: none;">
+ 
+  <ul>
+    <li>
+      <li>Elementary<br><h3>Balagon Elementary School</h3></li>
+      <li>Secondary<br><h3>Camanga National High School</h3></li>
+      <li>Tertiary<br><h3>WMSU Siay ESU </h3></li>
+    </li>
+  </ul>
+</div>
+
+<div id="hobbies-content" style="display: none;">
+  
+  <ul>
+    <li><img src="images/h5.jpg" alt="Skill 1" width="100px" height="40px"> <br>READING</li>
+    <li><img src="images/h3.jpg" alt="Skill 2" width="100px" height="40px"> <br>LEARNING HANGEUL</li>
+    <li><img src="images/h4.jpg" alt="Skill 3" width="100px" height="40px"> <br>WATCHING MOVIES</li>
+  </ul>
+</div>
+
+<div id="education-content" style="display: none;">
+  <h2>EDUCATION</h2>
+  <ul>
+    <li>
+      <h3>1st Year College</h3>
+      <p>   As a dedicated student, I've pursued my passion for learning and growth, and I'm currently studying Bachelor of Science in Computer Science at Western Mindanao State University Siay External Campus. </p>
+    </li>
+  </ul>
+</div>
+
+<div id="birthday-content" style="display: none;">
+  
+  <ul>
+    <li>
+      <h3>MARCH 19, 2006</h3>
+      <h4>AGE:19 YEARS OLD</h4>
+      <h4>ZODIAC SIGN:PISCES</h4>
+    </li>
+  </ul>
+</div>
+
+<div id="talents-content" style="display: none;">
+      <h5><li>DRAWING</li></h5>
+      <h3><li>SINGING</li></h2>
+      <h1><li>DANCING</li></h1>
+  <br><img src="images/drawing.jpg" alt=""width="200px" height="53px">
+  <img src="images/singing.jpg" alt=""width="200px" height="53px">
+  <img src="images/talent.jpeg" alt=""width="200px" height="53px">
+</div>
+
+<div id="family-content" style="display: none;">
+  
+  <ul>
+      <li><img src="images/fam.jpg" alt="" width="100px" height="40px"></li>
+      <li><img src="images/lola.jpg" alt="" width="100px" height="40px"></li>
+      <li><img src="images/papa.jpg" alt="" width="100px" height="40px"></li>
+      <li><img src="images/mama.jpg" alt="" width="100px" height="40px"></li>
+      <li><img src="images/kuya.jpg" alt="" width="100px" height="40px"></li>
+      <li><img src="images/manghod.jpg" alt="" width="100px" height="40px"></li>
+      
+      <li><img src="images/bff.jpeg" alt="" width="100px" height="40px"></li>
+      <li><img src="images/bf.jpeg" alt="" width="100px" height="40px"></li>
+  </ul>
+</div>
+
+    
+</body>
+<script>
+  function showContent(type) {
+    var contentArea = document.getElementById("content-area");
+    var content = document.getElementById(type + "-content").innerHTML;
+    contentArea.innerHTML = content;
+  }
+</script>
+</html>

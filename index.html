@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aiza Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  
+  <style>
+    .typewriter {
+      font-family: monospace;
+      font-size: 18px;
+    }
+
+    #typewriter-text {
+      border-right: 2px solid #000;
+      animation: blink 0.5s infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        border-color: #000;
+      }
+      50% {
+        border-color: transparent;
+      }
+      100% {
+        border-color: #000;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="navbar">
+      <img src="images/girl.png" class="logo">
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="info">
+      <h3> Hi I'm <span1>Aiza</span>. </h3>
+      <div class="typewriter">I'm a <span id="typewriter-text"></span></div>
+      <h1><span>C</span>omputer <span>S</span>cience <br>Student</h1>
+      <h3> Creative and detail-oriented individual with a<br> passion for bringing innovative ideas to life.</h3>
+      <a href="contact.html">CONTACT ME</a>
+      <div class="sign"> </div>
+      <section id="aboutme">
+        <div class="about-box">
+          <div class="about-info">
+            <h1><span>ABOUT ME</span><h1>
+            <p>
+Welcome to my portfolio! I'm Aiza Maxene M. Duga. Explore my work and let's connect!
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script>
+    const typewriterText = document.getElementById('typewriter-text');
+    const texts = ['Computer Science Student', 'Future Developer'];
+    let textIndex = 0;
+    let charIndex = 0;
+
+    function typeWriter() {
+      if (charIndex < texts[textIndex].length) {
+        typewriterText.textContent += texts[textIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, 100);
+      } else {
+        setTimeout(() => {
+          textIndex = (textIndex + 1) % texts.length;
+          charIndex = 0;
+          typewriterText.textContent = '';
+          typeWriter();
+        }, 2000);
+      }
+    }
+
+    typeWriter();
+  </script>
+</body>
+</html>
+
+
